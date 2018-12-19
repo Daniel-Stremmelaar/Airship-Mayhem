@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && mayFire == true)
         {
             print("Shoot");
+            Instantiate(shot, shotSpawn.transform.position, transform.rotation);
             StartCoroutine(Reload(reloadTime));
             mayFire = false;
         }
