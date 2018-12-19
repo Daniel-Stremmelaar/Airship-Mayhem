@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Shooting")]
     public GameObject shot;
-    public GameObject shotSpawn;
+    public Transform shotSpawn;
     public float reloadTime;
     private bool mayFire;
 

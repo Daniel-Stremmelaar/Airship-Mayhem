@@ -18,5 +18,6 @@ public class Shot : MonoBehaviour {
         {
             collision.gameObject.GetComponent<Target>().Damage(damage);
         }
+        Destroy(gameObject);
     }
 }

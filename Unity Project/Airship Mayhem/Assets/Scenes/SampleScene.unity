@@ -150,7 +150,7 @@ MonoBehaviour:
   verticalRotationSpeed: 15
   maxAngle: 50
   shot: {fileID: 1175592607328574, guid: 23d1a511af6eada4f98c823a337f8ca4, type: 2}
-  shotSpawn: {fileID: 1412120184}
+  shotSpawn: {fileID: 1412120185}
   reloadTime: 2
 --- !u!135 &3926844
 SphereCollider:
@@ -358,7 +358,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1.74}
+  m_LocalPosition: {x: 0, y: 0, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3926847}
@@ -386,7 +386,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412120184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.153, z: 0.472}
+  m_LocalPosition: {x: 0, y: 0.153, z: 1.1039999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3926847}
