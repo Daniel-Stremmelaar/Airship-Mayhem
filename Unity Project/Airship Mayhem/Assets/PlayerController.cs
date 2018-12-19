@@ -18,12 +18,19 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Vertical Rotation")]
     public float verticalRotationSpeed;
+    public float maxAngle;
     private Vector3 rotationVertical;
+
+    [Header ("Shooting")]
+    public GameObject shot;
+    public GameObject shotSpawn;
+    public float reloadTime;
+    private bool mayFire;
 
     // Use this for initialization
     void Start()
     {
-        
+        mayFire = true;
     }
 
     private void Update()
@@ -37,6 +44,12 @@ public class PlayerController : MonoBehaviour
         {
             horizontalSpeed /= moveSpeedMultiplier;
             depthSpeed /= moveSpeedMultiplier;
+        }
+        if (Input.GetButtonDown("Fire1") && mayFire == true)
+        {
+            print("Shoot");
+            StartCoroutine(Reload(reloadTime));
+            mayFire = false;
         }
     }
 
@@ -67,7 +80,13 @@ public class PlayerController : MonoBehaviour
         rotationHorizontal.y += Input.GetAxis("Mouse X") * horizontalRotationSpeed;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotationHorizontal.y, 0.0f);
         rotationVertical.x += -Input.GetAxis("Mouse Y") * verticalRotationSpeed;
-        rotationVertical.x = Mathf.Clamp(rotationVertical.x, -50.0f, 50.0f);
+        rotationVertical.x = Mathf.Clamp(rotationVertical.x, -maxAngle, maxAngle);
         transform.eulerAngles = (new Vector3(rotationVertical.x, transform.eulerAngles.y, 0.0f));
+    }
+
+    private IEnumerator Reload(float time)
+    {
+        yield return new WaitForSeconds(time);
+        mayFire = true;
     }
 }
