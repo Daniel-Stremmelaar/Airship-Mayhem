@@ -6,10 +6,16 @@ public class Shot : MonoBehaviour {
 
     public float moveSpeed;
     public int damage;
+    public float lifeTime;
 	
 	// Update is called once per frame
 	void Update () {
         transform.Translate(Vector3.forward * moveSpeed);
+        lifeTime -= Time.deltaTime;
+        if(lifeTime <= 0)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     private void OnCollisionEnter(Collision collision)
