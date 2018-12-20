@@ -9,7 +9,7 @@ public class Shot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(transform.forward * moveSpeed);
+        transform.Translate(Vector3.forward * moveSpeed);
 	}
 
     private void OnCollisionEnter(Collision collision)
