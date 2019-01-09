@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33804677816439748}
   - component: {fileID: 23538998689115560}
   - component: {fileID: 114130379744626880}
+  - component: {fileID: 135802714279142300}
   m_Layer: 0
   m_Name: Mine
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1181282242141258}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.3601055, y: -1.5268924, z: 4.4459476}
+  m_LocalPosition: {x: -0.1, y: 2.5596476, z: 14.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,3 +97,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  damage: 1
+  explosionRadius: 3
+  explosionSpeed: 50
+--- !u!135 &135802714279142300
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1181282242141258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Center: {x: 0, y: 0, z: 0}

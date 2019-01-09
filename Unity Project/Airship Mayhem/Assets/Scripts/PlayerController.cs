@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     public float reloadTime;
     private bool mayFire;
 
+    [Header ("Health")]
+    public int hp;
+
     // Use this for initialization
     void Start()
     {
@@ -89,5 +92,16 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         mayFire = true;
+    }
+
+    public void Damage(int i)
+    {
+        hp -= i;
+        if(hp <= 0)
+        {
+            Time.timeScale = 0;
+            print("Game Over");
+            Destroy(gameObject);
+        }
     }
 }
